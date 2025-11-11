@@ -27,7 +27,7 @@ st.markdown(
 with st.container():
     left, right = st.columns([3, 1])
     with left:
-        st.header("🧊 Glacier Melting Tracker (No OpenCV)")
+        st.header("🧊 Glacier Melting Tracker ")
         st.markdown('<div class="header">', unsafe_allow_html=True)
         st.title("Vishesh Kumar Prajapati — Computer Vision & Data Science")
         st.markdown("<p  class='sub'>Portfolio · Computer Vision · Python · Streamlit</p>", unsafe_allow_html=True)
@@ -67,9 +67,10 @@ def apply_colormap(diff_gray, cmap_name="viridis"):
 st.header("Glacier Melting Tracker")
 col1, col2 = st.columns(2)
 with col1:
-    before_file = st.file_uploader("Upload BEFORE image", type=['png','jpg','jpeg'], key='before')
+    before_file = st.file_uploader("Upload BEFORE image", type=['png','jpg','jpeg'], key='before_main')
 with col2:
-    after_file = st.file_uploader("Upload AFTER image", type=['png','jpg','jpeg'], key='after')
+    after_file = st.file_uploader("Upload AFTER image", type=['png','jpg','jpeg'], key='after_main')
+
 
 if before_file and after_file:
     before_img = resize_pil(Image.open(before_file))
