@@ -88,7 +88,7 @@ if before_file and after_file:
     st.metric("Percent changed (approx)", f"{pct:.2f}%")
 
 else:
-   else:
+
     st.info("Upload BEFORE and AFTER images to compare.")
 
 st.header("Glacier Melting Tracker")
